@@ -1,5 +1,8 @@
+[phases.setup]
+nixPkgs = ["python3", "python3Packages.pip"]
+
 [phases.install]
-cmds = ["pip install --break-system-packages feedparser requests"]
+cmds = ["python3 -m pip install feedparser requests"]
 
 [start]
-cmd = "python scanner.py"
+cmd = "python3 scanner.py"
